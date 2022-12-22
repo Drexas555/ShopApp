@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using ShopApp.Data;
 using ShopApp.Models;
 using Microsoft.AspNetCore.Authorization;
+using System.Security.Cryptography.X509Certificates;
 
 namespace ShopApp.Controllers
 {
@@ -78,6 +79,7 @@ namespace ShopApp.Controllers
                 return RedirectToAction(nameof(Index));
             }
             return View(shopItem);
+
         }
 
         // GET: ShopItems/Edit/5
@@ -98,7 +100,7 @@ namespace ShopApp.Controllers
         }
 
         // POST: ShopItems/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // To protect from overposting attacks, enable the specific properties you want to bind to. 
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [Authorize]
         [HttpPost]
